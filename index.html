@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="Neg School — committed to excellence in learning and community" />
+  <title>Neg School</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <h1 class="logo">Neg School</h1>
+      <nav class="nav">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#admissions">Admissions</a>
+        <a href="#news">News</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <button class="menu-toggle" aria-expanded="false">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <section id="home" class="hero">
+      <div class="container">
+        <h2>Welcome to Neg School</h2>
+        <p>Committed to excellence in learning and community.</p>
+        <a class="btn" href="#admissions">Apply Now</a>
+      </div>
+    </section>
+
+    <section id="about" class="container section">
+      <h3>About Us</h3>
+      <p>Short paragraph about the school's mission, vision and values.</p>
+    </section>
+
+    <section id="admissions" class="container section">
+      <h3>Admissions</h3>
+      <p>Information on how to apply, deadlines, and contact details.</p>
+    </section>
+
+    <section id="news" class="container section">
+      <h3>News & Events</h3>
+      <article class="news-item">
+        <h4>Upcoming Open Day</h4>
+        <p>Date and brief description.</p>
+      </article>
+    </section>
+
+    <section id="contact" class="container section">
+      <h3>Contact</h3>
+      <address>
+        <strong>Neg School</strong><br />
+        123 School Street<br />
+        City, Country<br />
+        <a href="tel:+1234567890">+1 234 567 890</a><br />
+        <a href="mailto:info@negschool.com">info@negschool.com</a>
+      </address>
+
+      <h4>Send us a message</h4>
+      <!-- Replace `https://formspree.io/f/your-form-id` with your Formspree endpoint -->
+      <form action="https://formspree.io/f/your-form-id" method="POST" class="contact-form">
+        <label>
+          Name
+          <input type="text" name="name" required />
+        </label>
+        <label>
+          Email
+          <input type="email" name="email" required />
+        </label>
+        <label>
+          Message
+          <textarea name="message" rows="5" required></textarea>
+        </label>
+        <button type="submit" class="btn">Send</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; <span id="year"></span> Neg School — All rights reserved.</p>
+      <p>Website: <a href="https://negschool.com">negschool.com</a></p>
+    </div>
+  </footer>
+
+  <script>
+    // Small script: set year and toggle mobile nav
+    document.getElementById('year').textContent = new Date().getFullYear();
+    const btn = document.querySelector('.menu-toggle');
+    const nav = document.querySelector('.nav');
+    btn.addEventListener('click', () => {
+      const expanded = btn.getAttribute('aria-expanded') === 'true';
+      btn.setAttribute('aria-expanded', String(!expanded));
+      nav.classList.toggle('open');
+    });
+  </script>
+</body>
+</html>
