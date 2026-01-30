@@ -1,24 +1,21 @@
-# Neg School — Starter Website
+# Neg School — Website
 
-This repository contains a minimal static website for Neg School, ready to publish via GitHub Pages with a custom domain (negschool.com).
+This repository contains a minimal static website for Neg School and is configured for a custom domain.
 
-Files added
+Files added:
 - `index.html` — main site
-- `styles.css` — basic styling and responsive rules
+- `styles.css` — site styles
 - `CNAME` — contains the custom domain `negschool.com`
-- `assets/.gitkeep` — placeholder so the `assets` folder is tracked
+- `assets/.gitkeep` — placeholder for images and other assets
 
-Local preview
-- Open `index.html` in a browser for a quick local preview.
+Local preview:
+- Open `index.html` in a browser.
 
-Publishing (GitHub Pages)
-1. Commit and push to the `main` branch (already done by this commit).
-2. In the repository Settings → Pages, ensure the branch is set to `main` and folder `/ (root)`.
-3. GitHub will use the `CNAME` file to configure the custom domain `negschool.com`. You will need to configure your DNS to point your domain to GitHub Pages (see GitHub Pages docs).
+Publish with GitHub Pages and CNAME (already added):
+1. Push to the `main` branch (done).
+2. In the repository settings on GitHub → Pages, confirm branch `main` and folder `/ (root)` is selected and save.
+3. The custom domain `negschool.com` is set via the CNAME file. Configure your DNS to point the domain to GitHub Pages (A records to 185.199.108.153, 185.199.109.153, 185.199.110.153, 185.199.111.153 and CNAME for www to `vijaytamang37-cmd.github.io`).
 
-Contact form
-- A simple contact form is included that uses Formspree. Replace the placeholder action `https://formspree.io/f/your-form-id` in `index.html` with your actual Formspree form endpoint.
-
-Notes
-- Change site content, logo, and colors by editing `index.html` and `styles.css`.
-- To add images, put them in `assets/` and reference them from HTML.
+Formspree contact form:
+- The contact form in `index.html` uses a placeholder action `https://formspree.io/f/your-form-id`.
+- Sign up at https://formspree.io, create a form, and replace the action URL with your Formspree endpoint to receive submissions.
