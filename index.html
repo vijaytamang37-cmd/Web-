@@ -5,13 +5,43 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Neg School</title>
   <meta name="description" content="Neg School — committed to excellence in learning and community." />
-  <link rel="stylesheet" href="styles.css" />
+
+  <!-- SEO / Social -->
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+  <meta property="og:site_name" content="Neg School" />
+  <meta property="og:title" content="Neg School" />
+  <meta property="og:description" content="Neg School — committed to excellence in learning and community." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://negschool.com/" />
+  <meta property="og:image" content="/assets/preview.svg" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <meta name="theme-color" content="#2b6cb0" />
+
+  <link rel="stylesheet" href="/styles.css" />
+
+  <!-- JSON-LD Organization -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "School",
+    "name": "Neg School",
+    "url": "https://negschool.com",
+    "logo": "https://negschool.com/assets/favicon.svg",
+    "contactPoint": [{
+      "@type": "ContactPoint",
+      "telephone": "+11234567890",
+      "contactType": "customer service",
+      "areaServed": "Worldwide"
+    }]
+  }
+  </script>
 </head>
 <body>
   <header class="site-header">
     <div class="container">
       <h1 class="logo">Neg School</h1>
-      <nav class="nav" aria-label="Primary navigation">
+      <nav class="nav" aria-label="Primary navigation" id="primary-navigation">
         <a href="#home">Home</a>
         <a href="#about">About</a>
         <a href="#admissions">Admissions</a>
@@ -23,44 +53,44 @@
   </header>
 
   <main>
-    <section id="home" class="hero">
+    <section id="home" class="hero" aria-labelledby="home-heading">
       <div class="container">
-        <h2>Welcome to Neg School</h2>
+        <h2 id="home-heading">Welcome to Neg School</h2>
         <p>Committed to excellence in learning and community.</p>
         <a class="btn" href="#admissions">Apply Now</a>
       </div>
     </section>
 
-    <section id="about" class="container section">
-      <h3>About Us</h3>
+    <section id="about" class="container section" aria-labelledby="about-heading">
+      <h3 id="about-heading">About Us</h3>
       <p>Neg School is dedicated to providing a safe, inclusive, and engaging learning environment where every student can thrive.</p>
     </section>
 
-    <section id="admissions" class="container section">
-      <h3>Admissions</h3>
+    <section id="admissions" class="container section" aria-labelledby="admissions-heading">
+      <h3 id="admissions-heading">Admissions</h3>
       <p>Information on how to apply, deadlines, and contact details.</p>
     </section>
 
-    <section id="news" class="container section">
-      <h3>News &amp; Events</h3>
-      <article class="news-item">
-        <h4>Upcoming Open Day</h4>
+    <section id="news" class="container section" aria-labelledby="news-heading">
+      <h3 id="news-heading">News &amp; Events</h3>
+      <article class="news-item" aria-labelledby="open-day-heading">
+        <h4 id="open-day-heading">Upcoming Open Day</h4>
         <p>Date and brief description.</p>
       </article>
     </section>
 
-    <section id="contact" class="container section">
-      <h3>Contact</h3>
+    <section id="contact" class="container section" aria-labelledby="contact-heading">
+      <h3 id="contact-heading">Contact</h3>
       <p>Use the form below to send us a message. Replace the form action with your Formspree endpoint to receive emails.</p>
       <form id="contact-form" action="https://formspree.io/f/your-form-id" method="POST">
         <label for="name">Name</label>
-        <input id="name" name="name" type="text" required />
+        <input id="name" name="name" type="text" required aria-required="true" />
 
         <label for="email">Email</label>
-        <input id="email" name="email" type="email" required />
+        <input id="email" name="email" type="email" required aria-required="true" />
 
         <label for="message">Message</label>
-        <textarea id="message" name="message" rows="5" required></textarea>
+        <textarea id="message" name="message" rows="5" required aria-required="true"></textarea>
 
         <button type="submit" class="btn">Send Message</button>
       </form>
@@ -75,7 +105,7 @@
     </section>
   </main>
 
-  <footer class="site-footer">
+  <footer class="site-footer" role="contentinfo">
     <div class="container">
       <p>&copy; <span id="year"></span> Neg School — All rights reserved.</p>
     </div>
